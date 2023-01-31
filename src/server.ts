@@ -9,8 +9,9 @@ app.use(express.json());
 
 app.post('/courses',(request, response) => {
 
-    const { name} = request.body;
-
+  return response.json({
+    name
+  })
  
 
 })
