@@ -1,5 +1,5 @@
 import express, { request } from 'express';
-import { createCourses} from './routes';
+import { categoriesRoutes } from './routes/categories.routes';
 
 
 
@@ -7,14 +7,9 @@ const app = express()
 
 app.use(express.json());
 
-app.post('/courses',(request, response) => {
+app.use("/categories", categoriesRoutes);
 
-  return response.json({
-    name
-  })
- 
 
-})
 
 
 app.listen(3333,()=> console.log('rodando'));
